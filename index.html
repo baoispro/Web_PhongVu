@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phong vũ</title>
+
+
+    <!-- thư viện boostrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /*Lấy vị trí li đầu để làm top position cho các submenu*/
+        .dropdown-menu li #first {
+            position: relative;
+        }
+
+        .dropdown-menu .dropdown-submenu {
+            position: absolute;
+            left: 100%;
+            top: 0px;
+        }
+
+        .dropdown-menu .dropdown-submenu-left {
+            right: 100%;
+            left: auto;
+        }
+
+        .dropdown-menu>li:hover>.dropdown-submenu {
+            display: block;
+        }
+
+        #hide:hover {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div style="width: 100%; display: flex;">
+            <img style="width: 100%; height: 100% ;object-fit: cover;" src="assets/img/topBanner.png" alt="topBanner">
+        </div>
+        <nav class="navbar navbar-expand-sm bg-blue navbar-dark flex-row-reverse">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/icon_khuyenmai.PNG" alt="khuyến mãi" height="25"
+                            width="25">
+                        <a href="#">Khuyến mãi</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/icon_showroom.PNG" alt="khuyến mãi" height="25"
+                            width="25">
+                        <a href="#">Hệ thống showroom</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/icon_taiNghe.PNG" alt="khuyến mãi" height="25"
+                            width="25">
+                        <a href="#">Tư vấn mua hàng (miễn phí): 1800 6867</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/icon_taiNghe.PNG" alt="khuyến mãi" height="25"
+                            width="25">
+                        <a href="#">CSKH: 1800 6865</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/icon_TecnologyNews.PNG" alt="khuyến mãi" height="25"
+                            width="25">
+                        <a href="#">Tin công nghệ</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/icon_buildPC.PNG" alt="khuyến mãi" height="25"
+                            width="25">
+                        <a href="#">Xây dựng cấu hình</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navbar navbar-expand-sm bg-white navbar-dark sticky-top ">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#">
+                <img id="logo" src="https://shopfront-cdn.tekoapis.com/static/phongvu/logo-full.svg" loading="lazy"
+                    decoding="async" alt="phongvu" style="width: 100%; height: 35px;">
+            </a>
+            <div id="menu" class="dropdown" style="display: none;">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Danh mục sản phẩm
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <!-- menu laptop -->
+                    <li id="first">
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/laptop_icon.PNG" alt="laptop" height="25"
+                                width="25">
+                            <a href="#">Laptop</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Laptop theo thương
+                                    hiệu</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Laptop theo cấu
+                                    hình</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Laptop theo nhu
+                                    cầu</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Laptop theo giá</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Apple</a>
+                                <a class="dropdown-item col-3" href="#">Intel Pentium/Celeron</a>
+                                <a class="dropdown-item col-3" href="#">Laptop Gaming</a>
+                                <a class="dropdown-item col-3" href="#">Dưới 10 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Acer</a>
+                                <a class="dropdown-item col-3" href="#">Intel Core i3</a>
+                                <a class="dropdown-item col-3" href="#">Laptop đồ họa</a>
+                                <a class="dropdown-item col-3" href="#">10 - 15 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                                <a class="dropdown-item col-3" href="#">Intel Core i5</a>
+                                <a class="dropdown-item col-3" href="#">Laptop 2 in 1</a>
+                                <a class="dropdown-item col-3" href="#">15 - 20 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Dell</a>
+                                <a class="dropdown-item col-3" href="#">Intel Core i7</a>
+                                <a class="dropdown-item col-3" href="#">Laptop SV-VP</a>
+                                <a class="dropdown-item col-3" href="#">20 - 25 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">HP</a>
+                                <a class="dropdown-item col-3" href="#">Intel Core i9</a>
+                                <a class="dropdown-item col-3" href="#">Laptop mỏng nhẹ</a>
+                                <a class="dropdown-item col-3" href="#">25 - 30 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Lenovo</a>
+                                <a class="dropdown-item col-3" href="#">AMD Ryzen 3</a>
+                                <a class="dropdown-item col-3" href="#">Laptop Workstation</a>
+                                <a class="dropdown-item col-3" href="#">Trên 30 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">LG</a>
+                                <a class="dropdown-item col-3" href="#">AMD Ryzen 5</a>
+                                <a class="dropdown-item col-3" href="#">Laptop Mini</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">MSI</a>
+                                <a class="dropdown-item col-3" href="#">AMD Ryzen 7</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Huawei</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Gigabyte</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- menu SP apple -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_apple.PNG" alt="apple" height="25"
+                                width="25">
+                            <a href="#">Sản phẩm Apple</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Apple Watch & Phụ
+                                    kiện</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Macbook</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">iPhone & iPad</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">iMac</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Apple Watch</a>
+                                <a class="dropdown-item col-3" href="#">Macbook Air</a>
+                                <a class="dropdown-item col-3" href="#">iPhone</a>
+                                <a class="dropdown-item col-3" href="#">iMac Mini</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Củ sạc & Cáp sạc</a>
+                                <a class="dropdown-item col-3" href="#">Macbook Pro</a>
+                                <a class="dropdown-item col-3" href="#">IPad</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Tai nghe Airpods</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Tai nghe Apple Beats</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Bàn phím,chuột & bút</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Apple TV</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Airtag</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Apple Care</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu điện máy -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center pdr_2p5rem">
+                            <img class="img-responsive" src="assets/img/icon_electronic.PNG" alt="điện" height="25"
+                                width="25">
+                            <a href="#">Điện máy-Điện gia dụng</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Thiết bị nhà bếp</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Máy giặt</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Điều hòa-Máy
+                                    lạnh</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Tủ lạnh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Bếp điện tử,bếp ga</a>
+                                <a class="dropdown-item col-3" href="#">Electrolux</a>
+                                <a class="dropdown-item col-3" href="#">LG</a>
+                                <a class="dropdown-item col-3" href="#">LG</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Bình đun siêu tốc</a>
+                                <a class="dropdown-item col-3" href="#">Sharp</a>
+                                <a class="dropdown-item col-3" href="#">Daikin</a>
+                                <a class="dropdown-item col-3" href="#">Samsung</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Bình thủy điện</a>
+                                <a class="dropdown-item col-3" href="#">Samsung</a>
+                                <a class="dropdown-item col-3" href="#">Casper</a>
+                                <a class="dropdown-item col-3" href="#">AQUA</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Lò nướng</a>
+                                <a class="dropdown-item col-3" href="#">LG</a>
+                                <a class="dropdown-item col-3" href="#">Panasonic</a>
+                                <a class="dropdown-item col-3" href="#">Electrolux</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Lò vi sóng</a>
+                                <a class="dropdown-item col-3" href="#">Panasonic</a>
+                                <a class="dropdown-item col-3" href="#">Toshiba</a>
+                                <a class="dropdown-item col-3" href="#">Casper</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Máy xanh thực phẩm</a>
+                                <a class="dropdown-item col-3" href="#">Toshiba</a>
+                                <a class="dropdown-item col-3" href="#">AQUA</a>
+                                <a class="dropdown-item col-3" href="#">Panasonic</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Máy ép trái cây</a>
+                                <a class="dropdown-item col-3" href="#">AQUA</a>
+                                <a class="dropdown-item col-3" href="#">Gree</a>
+                                <a class="dropdown-item col-3" href="#">Sharp</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Máy vắt cam</a>
+                                <a class="dropdown-item col-3" href="#">Casper</a>
+                                <a class="dropdown-item col-3" href="#">Samsung</a>
+                                <a class="dropdown-item col-3" href="#">Toshiba</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Máy đánh trứng</a>
+                                <a class="dropdown-item col-3" href="#">Máy giặt cửa trước</a>
+                                <a class="dropdown-item col-3" href="#">Sharp</a>
+                                <a class="dropdown-item col-3" href="#">Tủ lạnh Inverter</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Máy làm bánh mì</a>
+                                <a class="dropdown-item col-3" href="#">Máy giặt cửa trên</a>
+                                <a class="dropdown-item col-3" href="#">Máy lạnh Inverter</a>
+                                <a class="dropdown-item col-3" href="#">Tủ lạnh Side-by-Side</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu PC-Máy tính bộ -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_pc.PNG" alt="điện" height="25" width="25">
+                            <a href="#">PC-Máy tính bộ</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">PC theo thương
+                                    hiệu</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">PC theo cấu hình
+                                    chip</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">PC theo nhu cầu</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">PC theo giá tiền</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Phong Vũ</a>
+                                <a class="dropdown-item col-3" href="#">Pentium/Celeron</a>
+                                <a class="dropdown-item col-3" href="#">PC văn phòng</a>
+                                <a class="dropdown-item col-3" href="#">Dưới 10 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Acer</a>
+                                <a class="dropdown-item col-3" href="#">Core i3</a>
+                                <a class="dropdown-item col-3" href="#">PC Gaming</a>
+                                <a class="dropdown-item col-3" href="#">10 - 15 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Apple</a>
+                                <a class="dropdown-item col-3" href="#">Core i5</a>
+                                <a class="dropdown-item col-3" href="#">PC đồ họa</a>
+                                <a class="dropdown-item col-3" href="#">15 - 20 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                                <a class="dropdown-item col-3" href="#">Core i7</a>
+                                <a class="dropdown-item col-3" href="#">PC All-In-One</a>
+                                <a class="dropdown-item col-3" href="#">Trên 20 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Dell</a>
+                                <a class="dropdown-item col-3" href="#">Xeon</a>
+                                <a class="dropdown-item col-3" href="#">PC Mini</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">HP</a>
+                                <a class="dropdown-item col-3" href="#">Ryzen</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Lenovo</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">MSI</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Intel</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu PC-Màn hình máy tính -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_monitor.PNG" alt="điện" height="25" width="25">
+                            <a href="#">PC-Màn hình máy tính</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Theo thương hiệu</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Theo giá</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Theo kích cỡ </a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Tần số quét</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">AOC</a>
+                                <a class="dropdown-item col-3" href="#">Dưới 3 triệu</a>
+                                <a class="dropdown-item col-3" href="#">Dưới 19"</a>
+                                <a class="dropdown-item col-3" href="#">60 Hz</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Acer</a>
+                                <a class="dropdown-item col-3" href="#">3 đến 5 triệu</a>
+                                <a class="dropdown-item col-3" href="#">19.5" đến 21.5"</a>
+                                <a class="dropdown-item col-3" href="#">75 Hz</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                                <a class="dropdown-item col-3" href="#">5 đến 10 triệu</a>
+                                <a class="dropdown-item col-3" href="#">22" đến 25"</a>
+                                <a class="dropdown-item col-3" href="#">144 Hz</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Dell</a>
+                                <a class="dropdown-item col-3" href="#">10 đến 15 triệu</a>
+                                <a class="dropdown-item col-3" href="#">27" đến 29"</a>
+                                <a class="dropdown-item col-3" href="#">165 Hz</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">HP</a>
+                                <a class="dropdown-item col-3" href="#">15 đến 20 triệu</a>
+                                <a class="dropdown-item col-3" href="#">31.5"</a>
+                                <a class="dropdown-item col-3" href="#">240 Hz</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Lenovo</a>
+                                <a class="dropdown-item col-3" href="#">Trên 20 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">LG</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">MSI</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Philips</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Viewsonic</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Samsung</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu PC-Link kiện máy tính -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_linkKien.PNG" alt="điện" height="25" width="25">
+                            <a href="#">PC-Linh kiện máy tính</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">CPU - Bộ vi xử lý</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Ổ cứng</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Case - Thùng máy tính</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">VGA - Card màn hình</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Pentium</a>
+                                <a class="dropdown-item col-3" href="#">WD</a>
+                                <a class="dropdown-item col-3" href="#">SAMA</a>
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Core i3</a>
+                                <a class="dropdown-item col-3" href="#">Seagate</a>
+                                <a class="dropdown-item col-3" href="#">XIGMATEK</a>
+                                <a class="dropdown-item col-3" href="#">Colorful</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Core i5</a>
+                                <a class="dropdown-item col-3" href="#">Kingston</a>
+                                <a class="dropdown-item col-3" href="#">Golden Field</a>
+                                <a class="dropdown-item col-3" href="#">GALAX</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Core i7</a>
+                                <a class="dropdown-item col-3" href="#">Samsung</a>
+                                <a class="dropdown-item col-3" href="#">Deepcool</a>
+                                <a class="dropdown-item col-3" href="#">Gigabyte</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Core i9</a>
+                                <a class="dropdown-item col-3" href="#">Kingmax</a>
+                                <a class="dropdown-item col-3" href="#">Phong Vũ</a>
+                                <a class="dropdown-item col-3" href="#">MSI</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Xeon</a>
+                                <a class="dropdown-item col-3" href="#">Crucial</a>
+                                <a class="dropdown-item col-3" href="#">Cooler Master</a>
+                                <a class="dropdown-item col-3" href="#">NVIDIA</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Athlon</a>
+                                <a class="dropdown-item col-3" href="#">Transcend</a>
+                                <a class="dropdown-item col-3" href="#">Aerocool</a>
+                                <a class="dropdown-item col-3" href="#">AMD</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Ryzen 3</a>
+                                <a class="dropdown-item col-3" href="#">Sandisk</a>
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Ryzen 5</a>
+                                <a class="dropdown-item col-3" href="#">Adata</a>
+                                <a class="dropdown-item col-3" href="#">MSI</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Ryzen 7</a>
+                                <a class="dropdown-item col-3" href="#">Ổ cứng HDD</a>
+                                <a class="dropdown-item col-3" href="#">CORSAIR</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Ryzen 9</a>
+                                <a class="dropdown-item col-3" href="#">Ổ cứng SSD</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Threadripper</a>
+                                <a class="dropdown-item col-3" href="#">Ổ cứng di động</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu PC-phụ kiện -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_phuKien.PNG" alt="điện" height="25" width="25">
+                            <a href="#">PC-Phụ kiện</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Chuột máy tính</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Bàn phím văn phòng</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Ghế gaming</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Lót chuột</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                                <a class="dropdown-item col-3" href="#">Logitech</a>
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                                <a class="dropdown-item col-3" href="#">Logitech</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Logitech</a>
+                                <a class="dropdown-item col-3" href="#">Rapoo</a>
+                                <a class="dropdown-item col-3" href="#">CORSAIR</a>
+                                <a class="dropdown-item col-3" href="#">CORSAIR</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">CORSAIR</a>
+                                <a class="dropdown-item col-3" href="#">Microsoft</a>
+                                <a class="dropdown-item col-3" href="#">Drift Gaming</a>
+                                <a class="dropdown-item col-3" href="#">Razer</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Razer</a>
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                                <a class="dropdown-item col-3" href="#">E-Dra</a>
+                                <a class="dropdown-item col-3" href="#">SteelSeries</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">SteelSeries</a>
+                                <a class="dropdown-item col-3" href="#">Razer</a>
+                                <a class="dropdown-item col-3" href="#">MSI</a>
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">HyperX</a>
+                                <a class="dropdown-item col-3" href="#">CORSAIR</a>
+                                <a class="dropdown-item col-3" href="#">Warrior</a>
+                                <a class="dropdown-item col-3" href="#">AKKO</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">AKKO</a>
+                                <a class="dropdown-item col-3" href="#">HyperX</a>
+                                <a class="dropdown-item col-3" href="#">AKRacing</a>
+                                <a class="dropdown-item col-3" href="#">MSI</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Fuhlen</a>
+                                <a class="dropdown-item col-3" href="#">Newmen</a>
+                                <a class="dropdown-item col-3" href="#">Cougar</a>
+                                <a class="dropdown-item col-3" href="#">Newmen</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">MSI</a>
+                                <a class="dropdown-item col-3" href="#">DareU</a>
+                                <a class="dropdown-item col-3" href="#">Razer</a>
+                                <a class="dropdown-item col-3" href="#">HyperX</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Dell</a>
+                                <a class="dropdown-item col-3" href="#">AKKO</a>
+                                <a class="dropdown-item col-3" href="#">MSI</a>
+                                <a class="dropdown-item col-3" href="#">Khác</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Newmen</a>
+                                <a class="dropdown-item col-3" href="#">Fuhlen</a>
+                                <a class="dropdown-item col-3" href="#">SIHOO</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">DareU</a>
+                                <a class="dropdown-item col-3" href="#">Dell</a>
+                                <a class="dropdown-item col-3" href="#">Khác</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Microsoft</a>
+                                <a class="dropdown-item col-3" href="#">SteelSeries</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">E-dra</a>
+                                <a class="dropdown-item col-3" href="#">E-dra</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu game -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_game.PNG" alt="điện" height="25" width="25">
+                            <a href="#">Game & Stream</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Màn hình Gaming</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Chuột Gaming</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Tay cầm & máy chơi game</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Bàn phím gaming</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                                <a class="dropdown-item col-3" href="#">Máy chơi game</a>
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Acer</a>
+                                <a class="dropdown-item col-3" href="#">Logitech</a>
+                                <a class="dropdown-item col-3" href="#">PlayStation</a>
+                                <a class="dropdown-item col-3" href="#">Logitech</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">BenQ</a>
+                                <a class="dropdown-item col-3" href="#">CORSAIR</a>
+                                <a class="dropdown-item col-3" href="#">Xbox</a>
+                                <a class="dropdown-item col-3" href="#">CORSAIR</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Dell</a>
+                                <a class="dropdown-item col-3" href="#">Razer</a>
+                                <a class="dropdown-item col-3" href="#">Logitech</a>
+                                <a class="dropdown-item col-3" href="#">Razer</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">HP</a>
+                                <a class="dropdown-item col-3" href="#">SteelSeries</a>
+                                <a class="dropdown-item col-3" href="#">Razer</a>
+                                <a class="dropdown-item col-3" href="#">SteelSeries</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">LG</a>
+                                <a class="dropdown-item col-3" href="#">Zowie</a>
+                                <a class="dropdown-item col-3" href="#">Rapoo</a>
+                                <a class="dropdown-item col-3" href="#">AKKO</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">MSI</a>
+                                <a class="dropdown-item col-3" href="#">HyperX</a>
+                                <a class="dropdown-item col-3" href="#">MSI</a>
+                                <a class="dropdown-item col-3" href="#">HyperX</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Viewsonic</a>
+                                <a class="dropdown-item col-3" href="#">AKKO</a>
+                                <a class="dropdown-item col-3" href="#">E-dra</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Samsung</a>
+                                <a class="dropdown-item col-3" href="#">Khác</a>
+                                <a class="dropdown-item col-3" href="#">Khác</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu Điện thoại -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_phone.PNG" alt="điện" height="25" width="25">
+                            <a href="#">Điện thoại & Phụ kiện</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Điện thoại</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Máy tính bảng</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Đồng hồ thông minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">iPhone</a>
+                                <a class="dropdown-item col-3" href="#">Apple</a>
+                                <a class="dropdown-item col-3" href="#">Apple</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Samsung</a>
+                                <a class="dropdown-item col-3" href="#">Samsung</a>
+                                <a class="dropdown-item col-3" href="#">Samsung</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                                <a class="dropdown-item col-3" href="#">Xiaomi</a>
+                                <a class="dropdown-item col-3" href="#">Garmin</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Xiaomi</a>
+                                <a class="dropdown-item col-3" href="#">Lenovo</a>
+                                <a class="dropdown-item col-3" href="#">Fitbit</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Nubia</a>
+                                <a class="dropdown-item col-3" href="#">Masstel</a>
+                                <a class="dropdown-item col-3" href="#">Xiaomi</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">ZTE</a>
+                                <a class="dropdown-item col-3" href="#">Dưới 5 triệu</a>
+                                <a class="dropdown-item col-3" href="#">Khác</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Dưới 5 triệu</a>
+                                <a class="dropdown-item col-3" href="#">5 - 10 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">5 - 10 triệu</a>
+                                <a class="dropdown-item col-3" href="#">Trên 10 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">10 - 15 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">15 - 20 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Trên 20 triệu</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu Phụ kiện -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_phuKienDienThoai.PNG" alt="điện" height="25" width="25">
+                            <a href="#">Phụ kiện</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Phụ kiện laptop</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Linh kiện laptop</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Phụ kiện di động</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Hub-Bộ chia,chuyển đổi</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Giá đỡ</a>
+                                <a class="dropdown-item col-3" href="#">Bàn phím laptop</a>
+                                <a class="dropdown-item col-3" href="#">Bao da - Ốp lưng</a>
+                                <a class="dropdown-item col-3" href="#">Unitek</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Đế tản nhiệt</a>
+                                <a class="dropdown-item col-3" href="#">Sạc laptop</a>
+                                <a class="dropdown-item col-3" href="#">Pin dự phòng</a>
+                                <a class="dropdown-item col-3" href="#">Ugreen</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Balo-túi chống sốc</a>
+                                <a class="dropdown-item col-3" href="#">Pin laptop</a>
+                                <a class="dropdown-item col-3" href="#">Cáp sạc</a>
+                                <a class="dropdown-item col-3" href="#">Mazer</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Ốp lưng</a>
+                                <a class="dropdown-item col-3" href="#">RAM laptop</a>
+                                <a class="dropdown-item col-3" href="#">Cục sạc</a>
+                                <a class="dropdown-item col-3" href="#">HyperDrive</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Dán màn hình</a>
+                                <a class="dropdown-item col-3" href="#">Bộ cấp nguồn</a>
+                                <a class="dropdown-item col-3" href="#">Giá đỡ</a>
+                                <a class="dropdown-item col-3" href="#">Belkin</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Miếng lót bàn hình</a>
+                                <a class="dropdown-item col-3" href="#">LCD laptop</a>
+                                <a class="dropdown-item col-3" href="#">Thẻ cào</a>
+                                <a class="dropdown-item col-3" href="#">Khác</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Khác</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu Thiết bị âm thanh -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_amThanh.PNG" alt="tai nghe" height="25" width="25">
+                            <a href="#">Thiết bị âm thanh</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Tai nghe</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Loa nghe nhạc</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Các loại loa</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">MicroPhone</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Apple</a>
+                                <a class="dropdown-item col-3" href="#">Bose</a>
+                                <a class="dropdown-item col-3" href="#">Loa vi tính</a>
+                                <a class="dropdown-item col-3" href="#">SARAMONIC</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Sony</a>
+                                <a class="dropdown-item col-3" href="#">Harman Kardon</a>
+                                <a class="dropdown-item col-3" href="#">Loa Soundbar</a>
+                                <a class="dropdown-item col-3" href="#">SALAR</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Logitech</a>
+                                <a class="dropdown-item col-3" href="#">JBL</a>
+                                <a class="dropdown-item col-3" href="#">Loa mini</a>
+                                <a class="dropdown-item col-3" href="#">AKG</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                                <a class="dropdown-item col-3" href="#">Logitech</a>
+                                <a class="dropdown-item col-3" href="#">Loa Bluetooth</a>
+                                <a class="dropdown-item col-3" href="#">HyperX</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Razer</a>
+                                <a class="dropdown-item col-3" href="#">Microlab</a>
+                                <a class="dropdown-item col-3" href="#">Loa kéo</a>
+                                <a class="dropdown-item col-3" href="#">SENIC</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">HyperX</a>
+                                <a class="dropdown-item col-3" href="#">Sony</a>
+                                <a class="dropdown-item col-3" href="#">Loa 2.0</a>
+                                <a class="dropdown-item col-3" href="#">Razer</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Zidli</a>
+                                <a class="dropdown-item col-3" href="#">SoundMax</a>
+                                <a class="dropdown-item col-3" href="#">Loa 2.1</a>
+                                <a class="dropdown-item col-3" href="#">BOYA</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">DareU</a>
+                                <a class="dropdown-item col-3" href="#">ReMax</a>
+                                <a class="dropdown-item col-3" href="#">Loa 4.1</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">SteelSeries</a>
+                                <a class="dropdown-item col-3" href="#">LG</a>
+                                <a class="dropdown-item col-3" href="#">Loa 5.1</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">SoundMax</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Soundpeats</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">E-dra</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu thiết bị thông minh -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_thongMinh.PNG" alt="điện" height="25" width="25">
+                            <a href="#">Thiết bị thông minh</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Thiết bị thông minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Bộ điều khiển trung tâm</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Bộ cảm biến</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Công tắt thông minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Xe điện</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Khóa cửa thông minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Ổ cắm thông minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Thiết bị điều khiển</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Chuông báo động</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Đèn thông minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Camera thông minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Sản phẩm khác</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu thiết bị văn phòng -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_TBVP.PNG" alt="điện" height="25" width="25">
+                            <a href="#">Thiết bị văn phòng</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Thiết bị mạng</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Thiết bị an ninh</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Máy in văn phòng</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Mực in - Giấy in</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">ASUS</a>
+                                <a class="dropdown-item col-3" href="#">KBVISION</a>
+                                <a class="dropdown-item col-3" href="#">Brother</a>
+                                <a class="dropdown-item col-3" href="#">Mực in Laser</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">TP-Link</a>
+                                <a class="dropdown-item col-3" href="#">HIKVISION</a>
+                                <a class="dropdown-item col-3" href="#">Canon</a>
+                                <a class="dropdown-item col-3" href="#">Mực in phun</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">TOTOLINK</a>
+                                <a class="dropdown-item col-3" href="#">QUESTEK</a>
+                                <a class="dropdown-item col-3" href="#">Espon</a>
+                                <a class="dropdown-item col-3" href="#">Mực in máy Fax</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">D-Link</a>
+                                <a class="dropdown-item col-3" href="#">EZVIS</a>
+                                <a class="dropdown-item col-3" href="#">HP</a>
+                                <a class="dropdown-item col-3" href="#">Drum</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Tenda</a>
+                                <a class="dropdown-item col-3" href="#">Xiaomi</a>
+                                <a class="dropdown-item col-3" href="#">Máy in Laser</a>
+                                <a class="dropdown-item col-3" href="#">Ruy băng</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Linksys</a>
+                                <a class="dropdown-item col-3" href="#">Camera an ninh</a>
+                                <a class="dropdown-item col-3" href="#">Máy in kim</a>
+                                <a class="dropdown-item col-3" href="#">Giấy in</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">DrayTek</a>
+                                <a class="dropdown-item col-3" href="#">Camera Wifi</a>
+                                <a class="dropdown-item col-3" href="#">Máy in phun</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Cisco</a>
+                                <a class="dropdown-item col-3" href="#">Đầu ghi hình</a>
+                                <a class="dropdown-item col-3" href="#">Máy in đa năng</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Router Wifi 6</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Router Wifi</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Wifi Mesh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Hub-Switch</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">USB Wifi</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">USB 3G/4G</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu Giải pháp doanh nghiệp -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_GPDN.PNG" alt="điện" height="25" width="25">
+                            <a href="#">Giải pháp doanh nghiệp</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Thiết bị doanh nghiệp</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Thiết bị hội nghị</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Màn hình quảng cáo</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="#">Thiết bị mạng</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Laptop</a>
+                                <a class="dropdown-item col-3" href="#">Hội nghị truyền hình</a>
+                                <a class="dropdown-item col-3" href="#">Màn hình khách sạn</a>
+                                <a class="dropdown-item col-3" href="#">Switch</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Máy tính để bàn</a>
+                                <a class="dropdown-item col-3" href="#">Camera hội nghị</a>
+                                <a class="dropdown-item col-3" href="#">Màn hình quảng cáo</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Máy chủ-Server</a>
+                                <a class="dropdown-item col-3" href="#">Micro hội nghị</a>
+                                <a class="dropdown-item col-3" href="#">Màn hình tương tác</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Ổ cứng mạng-NAS</a>
+                                <a class="dropdown-item col-3" href="#">Loa hội nghị</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Phần mềm</a>
+                                <a class="dropdown-item col-3" href="#">Phần mềm hội nghị</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Máy chiếu</a>
+                                <a class="dropdown-item col-3" href="#">Phụ kiện hội nghị</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="#">Máy Photocopy</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Khúc này cần coi lại col-12 để responsive điện thoại -->
+            <div class="col-xl-6 col-md-4 col-12">
+                <form class="form-inline" action="/action_page.php">
+                    <input class="form-control mr-sm-2 col-sm-12 search" type="text" placeholder="Nhập từ khóa cần tìm">
+                </form>
+            </div>
+            <!-- Links -->
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/user_icon.PNG" alt="khuyến mãi" height="40"
+                            width="40">
+                        <div>
+                            <a href="#" class="color_gray fw-500 fontsize_13px">Đăng nhập</a>
+                            <br>
+                            <a href="#" class="color_gray fw-500 fontsize_13px">Đăng kí</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/notice_icon.PNG" alt="khuyến mãi" height="40"
+                            width="40">
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/cart_icon.PNG" alt="khuyến mãi" height="40"
+                            width="40">
+                        <div>
+                            <a href="#" class="color_gray fw-500 fontsize_13px">Giỏ hàng của bạn</a>
+                            <br>
+                            <a href="#" class="color_gray fw-500 fontsize_13px">(0) sản phẩm</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="navbar">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At esse tempora eveniet quod explicabo debitis,
+            voluptate eos beatae, velit possimus, fugiat similique ipsa! Voluptas accusantium eligendi necessitatibus
+            praesentium? Obcaecati aperiam provident tempora consequuntur ea numquam alias porro eum ratione placeat
+            mollitia nam dicta sit, inventore nulla, accusantium quo excepturi saepe temporibus, laboriosam ex
+            explicabo!
+            Nisi dignissimos, vero accusantium inventore cum error illum quisquam ipsum odio pariatur. Temporibus
+            placeat
+            quia, architecto cumque, quibusdam officiis obcaecati impedit dolore voluptates assumenda asperiores
+            perferendis
+            consequuntur! Natus necessitatibus nostrum voluptatum aliquid, nisi dolores ullam blanditiis aliquam. Dolore
+            esse ipsa tempore impedit laudantium consequatur exercitationem eveniet repellat harum aspernatur! Eos,
+            tenetur
+            quos, quam aperiam, odio ipsum voluptatibus facere molestiae iste dicta blanditiis nesciunt. Hic delectus
+            amet
+            nihil quo, in porro nulla repellendus dolorem molestiae nesciunt repellat reiciendis alias totam ea
+            cupiditate
+            voluptatibus natus ducimus repudiandae itaque pariatur quibusdam ipsum vero nemo beatae! Alias officiis quos
+            tempore molestias fuga, dolorem culpa in beatae eum ipsam est dicta perspiciatis doloremque nam corrupti
+            consequatur numquam quas sapiente reiciendis earum nobis vero! Expedita distinctio culpa vero, quis
+            temporibus
+            hic et adipisci nulla. Quibusdam architecto laborum expedita. Ut beatae alias blanditiis ex architecto
+            repellendus, quibusdam, dolore vitae quas eius repellat. Totam enim aperiam in aspernatur, ipsam molestiae
+            reiciendis repellat, ad blanditiis iusto autem optio fugit sequi dolorem quis minima nulla dicta laudantium
+            et,
+            maxime nemo omnis hic eos. Praesentium, odit possimus eaque aliquid, dolorem vero fuga consectetur
+            exercitationem aliquam voluptatem quis doloremque, dolore voluptatibus inventore similique libero officiis
+            architecto eius velit corrupti omnis dolorum ipsum accusantium. Alias facilis iste accusamus libero
+            praesentium
+            mollitia sit, animi dicta laborum iusto, expedita, perspiciatis quisquam eum aspernatur vero similique
+            corporis
+            nisi dolore ea! Assumenda laudantium temporibus autem eum, reiciendis asperiores aliquid expedita numquam,
+            aut
+            incidunt perferendis. Fugiat qui doloremque placeat accusamus tempora vel quas debitis deserunt, fugit
+            sapiente,
+            itaque velit, deleniti magnam. Perferendis deleniti aliquid voluptate eligendi itaque! Exercitationem et
+            officia, doloribus quibusdam rem magnam provident corporis. Dolores cumque ab sit aspernatur nemo numquam
+            autem
+            officiis expedita? Culpa saepe, minima eum enim obcaecati doloremque voluptate corrupti magni dignissimos
+            temporibus libero corporis sapiente. Tempora pariatur quaerat possimus vero aspernatur expedita repellendus
+            hic
+            minima. Consequuntur sunt vero corporis, cum officia suscipit accusamus asperiores veniam delectus hic,
+            error
+            vel. Voluptatum pariatur adipisci, natus animi temporibus asperiores? Quas in velit illum eos eum dicta
+            perferendis unde similique. Ipsum impedit sequi incidunt voluptatibus beatae aperiam, distinctio nihil
+            architecto! Autem vero omnis ab sunt debitis, doloribus iste ut perferendis quibusdam iusto laborum aliquam
+            ipsa
+            sequi, reprehenderit quo facilis fugit unde provident! Natus aperiam consequatur excepturi provident
+            assumenda
+            esse nesciunt dicta dolorem autem ab. Incidunt inventore dolorum error ratione quis necessitatibus quaerat
+            vel
+            consectetur fugiat voluptatem quas magni iste praesentium doloribus, libero similique tenetur voluptatum
+            velit
+            quae omnis. Molestias rem facere sint voluptatem atque omnis eligendi, quidem optio beatae quo hic, nobis,
+            culpa
+            reiciendis quisquam cupiditate blanditiis quasi laboriosam laborum minus voluptatum aliquam? In, eveniet
+            iste
+            eius magnam facilis repellendus illo reiciendis consequatur tempora consectetur eum aspernatur autem
+            consequuntur esse voluptatibus inventore distinctio sed ullam. Aspernatur dolorem, odit commodi itaque nobis
+            molestias quis delectus adipisci dolor nihil placeat vitae omnis modi. Dicta totam praesentium nihil
+            nesciunt?
+            Velit at odio rem facere, repellat excepturi sequi quod modi earum necessitatibus natus molestiae, nihil
+            aspernatur! Neque minus dignissimos non provident quaerat assumenda vitae quibusdam incidunt nulla labore,
+            vel
+            velit! Rerum illo tempora vero! Nisi reiciendis autem accusamus, possimus quos vitae deserunt nulla quas ea
+            eligendi consectetur nobis commodi voluptatum vero voluptas accusantium doloribus aut tempore eos porro
+            obcaecati sint sapiente. Culpa eligendi optio repellat in consectetur nobis, necessitatibus fuga quos eos.
+            Quibusdam laudantium asperiores placeat quasi repellendus explicabo possimus mollitia quia odit ratione ut
+            quis
+            cumque aspernatur optio vel eaque quam sequi accusantium, magnam libero! Repellendus odit non ad nisi quos
+            provident sit neque eligendi nihil repudiandae tempore expedita similique veritatis a culpa dolore
+            laudantium,
+            ipsa fugiat obcaecati suscipit error quidem optio ab architecto. Vitae iusto cumque quas laboriosam
+            praesentium
+            assumenda nulla ab eaque tempora facilis nemo fugiat dolorem incidunt adipisci exercitationem aperiam,
+            blanditiis animi sapiente dolor cupiditate quod? Voluptas adipisci, debitis neque ducimus aspernatur nihil
+            porro
+            voluptatum aut, numquam dicta libero nobis, quas laboriosam molestias odio. Eaque debitis dolore minus
+            distinctio et asperiores sequi quae iusto earum enim quibusdam maxime commodi voluptatum, quidem alias nobis
+            vero blanditiis sunt sit. Voluptate, sunt id aliquid totam molestiae, alias ut eligendi et eaque odit
+            accusamus
+            illo? Neque deleniti, saepe obcaecati provident, cum quasi veniam, eveniet sit eaque fugit nostrum. Suscipit
+            repellendus consequuntur explicabo optio. Similique deleniti nostrum ea atque rerum a! Amet autem id neque
+            eius
+            sint sequi sit, iusto alias mollitia consequatur culpa rem adipisci repellat odit enim consequuntur magnam
+            est.
+            Quidem doloremque aut nihil recusandae? Debitis laboriosam quisquam, dignissimos asperiores quidem veniam
+            laudantium sit officiis voluptate, facere ipsum? Aut ut impedit inventore ratione id praesentium quibusdam
+            eum
+            vitae, recusandae magnam ea, nobis sunt temporibus velit quam obcaecati dolore optio dolorem, repellat earum
+            maiores eaque quod voluptas magni. Quas, numquam. Recusandae, accusantium quod dignissimos expedita eligendi
+            repellat iusto nostrum sapiente, corporis quos non. Reiciendis vero, suscipit natus maxime, atque asperiores
+            minus autem harum eaque odio, nulla vel consequuntur sequi. Quasi necessitatibus laudantium sint molestias.
+            Dicta recusandae sequi exercitationem, rerum, corrupti aliquid officiis velit minus voluptatem aliquam sed
+            molestias provident totam quisquam? Perferendis corrupti qui itaque fuga obcaecati consequatur rem et
+            laboriosam
+            vel. Ipsam hic id perspiciatis qui ipsum sequi, deleniti possimus quos ex ut cumque saepe quasi modi! Saepe
+            in
+            neque reprehenderit perferendis suscipit, repudiandae obcaecati eius deserunt quo provident ullam nisi
+            cupiditate consectetur adipisci alias distinctio atque dicta accusamus porro harum similique, quam delectus
+            nobis. Sed hic amet reiciendis inventore, repudiandae sit tenetur id enim. Animi alias itaque at doloribus
+            ad
+            saepe numquam soluta veniam aliquid. Aspernatur repellat illum mollitia odio, laborum laudantium et enim,
+            voluptate beatae nobis officiis voluptas fugiat optio, excepturi cum praesentium laboriosam rerum non
+            quaerat
+            alias vitae obcaecati earum ad libero! Molestiae error accusantium eveniet esse vero laborum quos dolor
+            voluptates, iste adipisci ullam totam perferendis iure eum alias nisi officia quia voluptatibus quae aut rem
+            tempore! Unde quis facere inventore debitis odio delectus consequatur fugit sit est incidunt maxime
+            praesentium
+            totam ratione libero rerum, id atque, repellendus asperiores vel voluptatum consequuntur dicta iure omnis
+            eos.
+            Amet quibusdam quas quaerat at voluptates possimus consequatur fugit distinctio iure nesciunt consectetur
+            sit
+            repellat tempora iste tenetur modi pariatur, esse est nihil, harum voluptas! Architecto similique odio
+            molestiae
+            itaque voluptas quam esse corporis cumque magni fugiat dicta laudantium quisquam, dolores pariatur quibusdam
+            optio fuga quod sunt! Commodi iusto iure exercitationem aliquam labore tempora molestias incidunt et odit.
+            Aspernatur, illum nemo, dolorem architecto qui enim accusantium magnam sint itaque assumenda reprehenderit
+            officiis soluta nesciunt cupiditate neque, quo aperiam excepturi dicta? Porro laborum dolores iste. Magni
+            rerum
+            adipisci est consequuntur velit quaerat animi in molestiae blanditiis voluptatibus totam nobis esse alias
+            harum
+            repellat mollitia deserunt, nisi reiciendis, tempora ipsum. Dolores sunt voluptatibus voluptatem deserunt
+            quam
+            beatae facilis inventore voluptas illo corporis? Aperiam, iste corrupti! Hic reprehenderit eaque voluptatum
+            eveniet rem doloribus, iusto perferendis quis deserunt assumenda illo laborum porro molestias. Hic impedit
+            voluptatibus vitae odit quia eius odio, tenetur dolorum, ratione ipsum suscipit qui eum. Nulla, incidunt
+            dolorum! Est maiores suscipit tenetur ad esse officiis numquam aperiam beatae quod recusandae eligendi,
+            laboriosam sint sunt excepturi soluta autem voluptatem iste perspiciatis in necessitatibus dolorem quia
+            ratione
+            tempora facere! Quis qui perspiciatis quasi deserunt, perferendis beatae culpa nisi quidem error quod
+            ratione?
+            Velit corrupti dolor nam voluptatem voluptas itaque nisi asperiores, nemo officia minus a mollitia qui! Quam
+            suscipit, error odit voluptas laboriosam saepe repellendus dolores rerum voluptates ducimus laborum mollitia
+            sed, modi voluptatem veniam nemo cupiditate, non quo. Odit, inventore nobis temporibus nostrum aspernatur
+            eos
+            provident! Vel inventore eligendi ipsum consequatur eos! Aliquid, impedit distinctio labore nisi debitis,
+            quam
+            quaerat minus corrupti esse ea laboriosam facilis. Voluptas voluptatum corrupti, recusandae eos temporibus
+            animi. Nulla expedita tempora cum reiciendis facere. Iste atque voluptates similique. Perferendis, porro
+            necessitatibus quibusdam officiis, quia soluta corrupti maiores qui voluptatem non odio nemo incidunt, amet
+            reiciendis odit nihil! Earum ratione, culpa consequuntur mollitia numquam beatae quis maiores modi eos
+            fugiat
+            aliquam laborum tenetur perferendis asperiores dolorem dolores fugit sed sequi expedita. Commodi culpa
+            aspernatur, hic fugit totam amet velit optio nihil tempore perspiciatis deleniti nobis ab officia unde
+            pariatur
+            sit a suscipit nemo saepe. Neque fuga impedit dicta praesentium dolor voluptatem, alias, accusamus inventore
+            odit, exercitationem at quaerat consequuntur similique consectetur! Dignissimos amet, voluptates vero maxime
+            omnis voluptatibus magni tempora unde, facilis dolorum, id accusantium ab? Voluptatibus aperiam commodi
+            deserunt
+            quod? Reiciendis pariatur est, iusto quo quos sapiente et aperiam quia nobis totam consequuntur. Facilis,
+            vero
+            molestiae cumque tempore laborum laudantium delectus nemo, quae, asperiores pariatur corrupti voluptatum
+            impedit
+            dolorem hic eveniet rem. Suscipit explicabo dolorum sed mollitia omnis tempora molestias temporibus. Quos
+            eum
+            animi, vel in perspiciatis ad, assumenda nulla incidunt, quaerat sunt dolorum consequatur eveniet quisquam
+            facilis! Iste facilis nulla, distinctio laudantium officia voluptatem ea illum minima itaque beatae. A
+            commodi,
+            amet minus, iste ad optio adipisci porro excepturi facere quod eius. Facilis numquam mollitia vel aut
+            repellat
+            dicta quae necessitatibus iure quibusdam eius, omnis culpa sed consequatur maxime cum quia molestiae earum
+            qui?
+            Nulla, quaerat. Cupiditate, nobis sint assumenda eaque quaerat porro necessitatibus tenetur reprehenderit,
+            perspiciatis id beatae voluptatem corporis quo. Quo eveniet ea neque eos? Tenetur exercitationem quisquam
+            accusantium harum consequuntur quasi blanditiis, saepe, aliquam quos nihil unde porro nesciunt, rem ea
+            distinctio autem ducimus. Itaque illum porro nam qui est deserunt blanditiis numquam quasi voluptas! Harum
+            sint
+            nobis est impedit quia necessitatibus provident consectetur iusto debitis aperiam delectus blanditiis
+            doloribus
+            sit excepturi molestiae earum nulla nisi distinctio veniam soluta officiis eaque, totam tempore. Eum amet,
+            aspernatur repellat ex totam animi eligendi, aperiam delectus magni sint nulla beatae porro architecto a
+            distinctio. Asperiores vel officiis sapiente in? Atque eos autem aperiam sunt ex accusamus dignissimos
+            maiores
+            optio officia pariatur similique deleniti et error facilis iure minus quasi impedit doloremque, amet
+            voluptatem
+            magnam incidunt odio. Vero autem laborum earum porro perferendis, labore sed ut ea qui nobis, eum, officiis
+            alias nemo eaque cumque aliquam omnis placeat tenetur necessitatibus quae inventore vitae magni maxime
+            ratione!
+            Saepe perferendis beatae consequuntur tempora fuga veniam est iusto sequi distinctio atque aperiam, enim
+            minus,
+            facere ipsum obcaecati, qui quis iure sapiente porro cupiditate alias cumque aut. Debitis sunt perferendis,
+            esse
+            nobis eligendi ut itaque sequi blanditiis sint culpa quisquam est reprehenderit possimus. Tempore
+            reprehenderit
+            exercitationem quidem eius, magni esse modi officia eveniet, deserunt doloremque soluta aliquid? Totam
+            molestiae
+            explicabo perferendis, ullam officia nihil voluptatem eum vel voluptas quae dolores sit deleniti non itaque
+            reprehenderit nulla excepturi distinctio a doloribus aliquam similique voluptates! Illum natus possimus rem
+            optio qui laudantium officia accusamus fugiat temporibus voluptatum! Veritatis veniam a, inventore minus,
+            nesciunt vitae odit laboriosam earum non itaque ad hic. Blanditiis accusamus facere quo repellendus aut
+            quisquam
+            amet quibusdam, commodi recusandae temporibus, consequuntur iusto nostrum error incidunt? Nam voluptatibus,
+            hic
+            neque dolor velit omnis accusantium reiciendis ea ullam aspernatur voluptate voluptatum ratione in
+            exercitationem similique harum cupiditate praesentium ducimus dolore quisquam dolores id accusamus rerum
+            quaerat. Quas quisquam repudiandae perspiciatis ipsam explicabo repellat cupiditate sapiente possimus
+            necessitatibus id nulla corporis doloremque minus laborum est aliquid dolorem, magnam reprehenderit placeat
+            sint
+            nisi hic harum voluptas. Odit, magnam delectus. A sapiente distinctio, deserunt animi sint consequuntur eius
+            dolorem! Maxime laboriosam aliquam error dolorum nemo unde, itaque animi? Minus ea repudiandae consectetur
+            quis
+            repellat, necessitatibus asperiores sint voluptates et magnam adipisci quia temporibus. Necessitatibus esse
+            numquam sunt non. Nesciunt, consequatur accusantium eveniet eos, debitis reiciendis fugit beatae unde velit
+            sed
+            at assumenda laborum accusamus perferendis provident laudantium sunt! Consequatur vel quis pariatur totam
+            reiciendis ut numquam voluptates ab! Nulla fugiat minus eaque quas dignissimos, excepturi exercitationem,
+            consequuntur, voluptas eius fugit in quos nam totam odio corrupti eum! Saepe eveniet autem aut molestias
+            laudantium minima accusamus facere quidem eaque amet ducimus adipisci alias voluptas a ab debitis, possimus
+            rem?
+            Sit sapiente accusantium quam repellat, dolorem, esse minima corrupti voluptate animi eum id eos provident.
+            Illum et voluptas veritatis atque amet mollitia sunt, reiciendis necessitatibus facere sit tempore
+            recusandae
+            repudiandae molestiae tenetur, provident hic eligendi excepturi repellat. Autem, dolorum eveniet. Voluptates
+            sunt asperiores placeat, quos repellendus in porro! Dolor culpa tempore dolorum in, nemo aperiam eaque
+            temporibus beatae, eius debitis corporis vel, deserunt expedita vero fugit dicta eligendi at harum tenetur
+            placeat? Unde, consectetur? Quas repudiandae eos voluptates provident perferendis? Odit iure a fugit
+            incidunt
+            eum nihil ipsa reiciendis libero id saepe, sint ipsum veniam, suscipit, illum qui? Vitae sapiente iusto
+            soluta
+            eaque cupiditate aperiam mollitia, rem vero repudiandae perspiciatis accusamus, debitis commodi, consectetur
+            officiis cum dicta quisquam quidem ducimus amet. Ex odio voluptas voluptatibus, quas alias esse ab! Optio,
+            voluptas recusandae voluptates in fugiat ipsam suscipit eveniet, quaerat dolorum ipsum a! Accusamus numquam
+            nesciunt odit iure placeat, at voluptate quo minus et expedita explicabo sapiente non doloribus sequi
+            reiciendis
+            cupiditate, ex earum rem aliquid necessitatibus ab aspernatur distinctio mollitia! Quisquam eum sed eaque,
+            error
+            labore nobis expedita numquam quia aspernatur provident molestiae ipsam nemo consectetur sint incidunt
+            sapiente,
+            quos quibusdam impedit atque iste. Consequuntur aut quos dolores tempore, reiciendis est sequi unde odio
+            temporibus sed, veniam cupiditate suscipit asperiores aspernatur in impedit! Libero deserunt, vero,
+            repellendus
+            impedit et esse, corporis aperiam laboriosam asperiores nam dolor nihil labore quos assumenda dolorem!
+            Labore
+            magnam doloribus molestias nostrum. Asperiores cum fuga accusamus voluptatibus blanditiis necessitatibus
+            reprehenderit odio ipsam. Aliquam magni atque repudiandae et ipsa est id eius ullam. Ducimus animi ut esse
+            necessitatibus perspiciatis at soluta, sunt neque culpa, ipsam ratione vitae tenetur nam quasi assumenda,
+            corrupti accusamus laboriosam deleniti! Ullam rerum, architecto soluta repellendus doloremque ipsam
+            voluptatem
+            pariatur beatae totam voluptas consectetur neque natus velit, fugiat quae in magni recusandae obcaecati ad
+            optio! Rerum voluptatibus nesciunt pariatur, voluptate libero nemo distinctio dicta cumque! Neque deserunt
+            culpa
+            cumque asperiores alias? Earum doloribus, esse velit id architecto eius, impedit optio inventore neque quod
+            exercitationem minus? Ratione illum dolore fugiat ullam inventore eveniet quisquam, minima praesentium
+            officia
+            reprehenderit nulla dolores pariatur aspernatur eos magni qui omnis dolor molestias perspiciatis itaque?
+            Maiores
+            deserunt, libero iste fugit, cumque fugiat omnis rem assumenda incidunt dolor officia provident molestias
+            totam
+            fuga! Saepe unde excepturi ratione, voluptas mollitia cum commodi debitis blanditiis odio velit harum illo
+            possimus temporibus odit quidem voluptatibus accusamus et! Unde, vel? Fuga, quo. Sint repudiandae ratione ex
+            ad
+            illo! Dolore minima tempora quia at. Non eum, ex veritatis minima ut assumenda? Tenetur, esse voluptate!
+            Repellendus reiciendis consequuntur, quos repudiandae id excepturi et, error laboriosam corrupti voluptate
+            quaerat ullam! Odit inventore suscipit itaque porro, praesentium natus aspernatur modi, soluta vitae aliquam
+            optio deserunt at iure vel labore quod ab rerum consectetur dolores ipsam aliquid fugiat reiciendis aperiam
+            corporis. Ipsum culpa dicta odio voluptatibus rem laboriosam ea iusto est, aliquam debitis. Quisquam
+            obcaecati
+            beatae quibusdam, consequuntur ipsam ullam exercitationem pariatur laborum voluptatibus, quae ipsa corporis
+            at
+            illo qui harum amet ratione? Recusandae consequuntur doloremque, quo inventore, voluptates nihil non quod
+            harum
+            mollitia laborum natus doloribus praesentium explicabo hic reprehenderit iste perspiciatis dolor quas!
+            Repellendus consectetur quidem ea labore facere esse, voluptates quis voluptatem accusantium nemo, accusamus
+            dolor laudantium adipisci voluptate totam vero expedita quae ad corrupti rerum maiores quia. Fuga ipsam nam
+            odit
+            qui enim architecto, cum, reiciendis obcaecati ab fugiat laborum temporibus rerum sint laudantium illo
+            veritatis
+            earum facere! Totam eveniet sapiente, nobis quaerat excepturi dolores non fugit id quasi. Fuga dolor
+            corporis
+            illum excepturi officia, consequuntur quod nemo unde aliquid voluptatem ratione debitis nisi error porro
+            sequi
+            minus et animi ut vel sint ad nihil nulla magni provident? Dignissimos, atque explicabo. Corporis reiciendis
+            magni eum. Inventore, esse obcaecati adipisci itaque nulla dolores fuga voluptas suscipit. Molestiae
+            exercitationem voluptate voluptatem cumque doloribus officia minima fugiat laboriosam! Enim cum molestiae
+            unde
+            eaque veniam labore id est, ea accusamus! Facere nulla rerum quia. Excepturi nesciunt nobis voluptatem
+            expedita
+            cum, repellat reprehenderit ab natus sint nemo? Culpa tempore adipisci voluptate consectetur maxime libero
+            vel
+            alias sit quam tenetur eligendi eos, optio animi distinctio cupiditate hic laborum fugiat sunt quia tempora
+            obcaecati maiores dignissimos harum. Tempora dolores eveniet nobis reprehenderit temporibus odio, vel
+            tempore
+            non incidunt ad dignissimos fuga in atque quam officia unde esse libero? Alias, sint distinctio eaque
+            suscipit
+            quia aperiam dolorum? Rem commodi eligendi dolorem facere error tenetur quae, assumenda molestias accusamus
+            perspiciatis optio sequi reprehenderit odio repudiandae hic dicta quis alias consequuntur qui quaerat nulla
+            sed
+            sint animi? Perferendis neque a numquam accusamus inventore sapiente rerum, beatae quas repellat odio magnam
+            ex
+            minus expedita, ducimus enim dolore sunt libero harum nihil, ullam quam nulla obcaecati veniam. Quos ad,
+            sequi,
+            fugit necessitatibus ullam numquam quas esse ratione a dignissimos modi reiciendis maiores autem sunt
+            facere.
+            Incidunt sapiente, iusto vitae nesciunt reprehenderit molestias earum minima laboriosam sunt esse, aliquam
+            nemo
+            nam eum! Consequatur impedit debitis beatae ipsa libero quos animi repellat nemo culpa, magni accusamus
+            aliquid,
+            quibusdam harum quaerat pariatur. Non repellendus eius minima. Maxime, minima dolor animi cupiditate sint
+            dolorem vitae, delectus ex reiciendis reprehenderit deserunt obcaecati sunt fugit quod assumenda suscipit
+            possimus autem impedit mollitia iure deleniti voluptatum? Cumque doloribus cupiditate ipsum ipsam obcaecati
+            unde
+            sint. Esse sint exercitationem ad dolore commodi laboriosam iure tenetur veniam at rerum sunt laudantium
+            architecto vero, perspiciatis necessitatibus, animi, natus asperiores ut neque id optio ea cumque? Fuga
+            delectus
+            animi eaque voluptates, magni pariatur, officiis ducimus eveniet vero iusto cum corrupti quibusdam beatae
+            esse
+            mollitia officia, odio fugit similique possimus accusantium magnam ipsum veniam? Sequi eum ducimus quibusdam
+            provident nulla natus perspiciatis, nam doloremque, cupiditate tempore laborum dolor nihil dolorum ad quam
+            cumque mollitia reprehenderit! Ea dicta corrupti esse impedit magnam delectus, ducimus ad asperiores sint
+            nam
+            exercitationem tempora perferendis! Vero, illo soluta. Beatae dignissimos adipisci et a optio deleniti aut
+            nisi
+            repellendus, natus porro saepe, alias veritatis numquam minima dolores similique provident distinctio eaque
+            labore laboriosam quam quisquam suscipit. Magnam perferendis ipsum ut consectetur autem doloribus
+            consequuntur
+            dolor neque expedita odio reprehenderit quasi reiciendis tempore voluptatum quis, tenetur eum in incidunt
+            deleniti, maiores officiis totam eius repudiandae nulla? Saepe nobis ex, odio itaque deleniti est corrupti
+            asperiores recusandae praesentium, eligendi temporibus.
+        </div>
+    </div>
+
+    <script>
+        var logo = document.getElementById("logo");
+        var menu = document.getElementById("menu");
+        window.addEventListener('scroll', function () {
+            var scrollTop = document.documentElement.scrollTop;
+            // nếu kéo lên hết thì đổi logo và thêm menu
+            if (scrollTop >= 103.5) {
+                logo.src = "https://shopfront-cdn.tekoapis.com/static/phongvu/logo.svg"
+                menu.style.display = "block"
+            } else {
+                logo.src = "https://shopfront-cdn.tekoapis.com/static/phongvu/logo-full.svg"
+                menu.style.display = "none"
+            }
+        });
+
+    </script>
+</body>
+
+</html>
