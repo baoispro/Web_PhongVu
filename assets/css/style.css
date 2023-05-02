@@ -23,6 +23,10 @@
     color: rgb(20, 53, 195) !important;
 }
 
+.color_white{
+    color: white;
+}
+
 .fontsize_13px{
     font-size: 0.8125rem;
 }
@@ -60,6 +64,11 @@ a:hover{
 
 #center{
     background-color: #f8f8fc;
+}
+
+#imgProduct:hover{
+    transform: scale(1.01);
+    object-fit: cover;
 }
 
 
