@@ -54,6 +54,14 @@ a:hover{
     margin-right: 0px;
 }
 
+.carousel-indicators{
+    bottom: 11%;
+}
+
+#center{
+    background-color: #f8f8fc;
+}
+
 
 
 
