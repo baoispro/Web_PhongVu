@@ -2367,6 +2367,11 @@
 
         // Set the width of the newDiv to be the same as botBannerWidth
         fp.style.width = botBannerWidth + "px";
+
+        // Hàm tự động refresh trang web
+        if (window.location.href.substr(-2) !== '?r') {
+            window.location = window.location.href + '?r';
+        }
     </script>
 </body>
 
