@@ -27,6 +27,10 @@
     color: white;
 }
 
+.color_black{
+    color: rgb(27, 29, 41);
+}
+
 .fontsize_13px{
     font-size: 0.8125rem;
 }
