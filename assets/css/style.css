@@ -101,5 +101,23 @@ a:hover{
   
 }
 
+.btn-outline-primary {
+    color: rgb(20, 53, 195);
+    border-color: rgb(20, 53, 195);
+}
+
+#muaNgay{
+    background-color: rgb(20, 53, 195) !important;
+}
+
+#muaNgay:hover{
+    background-color: rgb(18, 48, 176) !important;
+}
+
+#themVaoGioHang:hover{
+    color: rgb(20, 53, 195);
+    border-color: rgb(20, 53, 195);
+}
+
 
 
