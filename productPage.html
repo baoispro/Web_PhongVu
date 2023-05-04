@@ -19,6 +19,32 @@
 
     <!-- thư viện font awsome -->
     <script src="https://kit.fontawesome.com/5c5719b5ba.js" crossorigin="anonymous"></script>
+
+    <style>
+        /*Lấy vị trí li đầu để làm top position cho các submenu*/
+        .dropdown-menu li #first {
+            position: relative;
+        }
+
+        .dropdown-menu .dropdown-submenu {
+            position: absolute;
+            left: 100%;
+            top: 0px;
+        }
+
+        .dropdown-menu .dropdown-submenu-left {
+            right: 100%;
+            left: auto;
+        }
+
+        .dropdown-menu>li:hover>.dropdown-submenu {
+            display: block;
+        }
+
+        #hide:hover {
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
     <div id="header">
