@@ -1212,7 +1212,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 bg-white">b</div>
+                    <!-- component chứa logo phong vũ và tên thương hiệu -->
+                    <div class="col-xl-3 col-lg-3 pr-0">
+                        <div class="d-flex bg-white justify-content-center rounded py-3">
+                            <img id="img_logo" class="rounded-circle" src="assets/img/logo_PhongVu.png" alt="logo của Phong Vũ" style="object-fit: contain; border: 1px solid rgb(228, 229, 240);">
+                            <p class="col-xl-9 col-lg-9 text-sm fw-500">CÔNG TY CỔ PHẦN THƯƠNG MẠI DỊCH VỤ PHONG VŨ <i class="fa-solid fa-circle-check" style="color: #30CD60;"></i></p>
+                        </div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1232,6 +1239,11 @@
                 menu.style.display = "none"
             }
         });
+        
+        //Xét chiều rộng sao cho bằng chiều cao của hình 
+        var img_logo = document.getElementById("img_logo");
+        var height = img_logo.offsetHeight
+        img_logo.style.width = height + "px"
     </script>
 </body>
 </html>
