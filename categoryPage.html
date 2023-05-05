@@ -4,9 +4,1162 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Phong Vũ</title>
+
+    <!-- thư viện boostrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Thư viện tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- thư viện font awsome -->
+    <script src="https://kit.fontawesome.com/5c5719b5ba.js" crossorigin="anonymous"></script>
+    <style>
+        /*Lấy vị trí li đầu để làm top position cho các submenu*/
+        .dropdown-menu li #first {
+            position: relative;
+        }
+
+        .dropdown-menu .dropdown-submenu {
+            position: absolute;
+            left: 100%;
+            top: 0px;
+        }
+
+        .dropdown-menu .dropdown-submenu-left {
+            right: 100%;
+            left: auto;
+        }
+
+        .dropdown-menu>li:hover>.dropdown-submenu {
+            display: block;
+        }
+
+        #hide:hover {
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="header">
+        <div style="width: 100%; display: flex;">
+            <img style="width: 100%; height: 100% ;object-fit: cover;" src="assets/img/topBanner.png" alt="topBanner">
+        </div>
+        <nav class="navbar navbar-expand-sm bg-blue navbar-dark flex-row-reverse">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/icon_khuyenmai.PNG" alt="khuyến mãi" height="25"
+                            width="25">
+                        <a href="#">Khuyến mãi</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/icon_showroom.PNG" alt="khuyến mãi" height="25"
+                            width="25">
+                        <a href="#">Hệ thống showroom</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/icon_taiNghe.PNG" alt="khuyến mãi" height="25"
+                            width="25">
+                        <a href="#">Tư vấn mua hàng (miễn phí): 1800 6867</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/icon_taiNghe.PNG" alt="khuyến mãi" height="25"
+                            width="25">
+                        <a href="#">CSKH: 1800 6865</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/icon_TecnologyNews.PNG" alt="khuyến mãi" height="25"
+                            width="25">
+                        <a href="#">Tin công nghệ</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/icon_buildPC.PNG" alt="khuyến mãi" height="25"
+                            width="25">
+                        <a href="#">Xây dựng cấu hình</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navbar navbar-expand-sm bg-white navbar-dark sticky-top ">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#">
+                <img id="logo" src="https://shopfront-cdn.tekoapis.com/static/phongvu/logo-full.svg" loading="lazy"
+                    decoding="async" alt="phongvu" style="width: 100%; height: 35px;">
+            </a>
+            <div id="menu" class="dropdown" style="display: none;">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Danh mục sản phẩm
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <!-- menu laptop -->
+                    <li id="first">
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/laptop_icon.PNG" alt="laptop" height="25"
+                                width="25">
+                            <a href="#">Laptop</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Laptop theo thương
+                                    hiệu</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Laptop theo cấu
+                                    hình</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Laptop theo nhu
+                                    cầu</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Laptop theo giá</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Apple</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Intel Pentium/Celeron</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Laptop Gaming</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dưới 10 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Acer</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Intel Core i3</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Laptop đồ họa</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">10 - 15 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Intel Core i5</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Laptop 2 in 1</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">15 - 20 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dell</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Intel Core i7</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Laptop SV-VP</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">20 - 25 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">HP</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Intel Core i9</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Laptop mỏng nhẹ</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">25 - 30 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Lenovo</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AMD Ryzen 3</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Laptop Workstation</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Trên 30 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">LG</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AMD Ryzen 5</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Laptop Mini</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">MSI</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AMD Ryzen 7</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Huawei</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Gigabyte</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- menu SP apple -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_apple.PNG" alt="apple" height="25"
+                                width="25">
+                            <a href="#">Sản phẩm Apple</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Apple Watch & Phụ
+                                    kiện</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Macbook</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">iPhone & iPad</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">iMac</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Apple Watch</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Macbook Air</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">iPhone</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">iMac Mini</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Củ sạc & Cáp sạc</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Macbook Pro</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">IPad</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Tai nghe Airpods</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Tai nghe Apple Beats</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Bàn phím,chuột & bút</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Apple TV</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Airtag</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Apple Care</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu điện máy -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center pdr_2p5rem">
+                            <img class="img-responsive" src="assets/img/icon_electronic.PNG" alt="điện" height="25"
+                                width="25">
+                            <a href="#">Điện máy-Điện gia dụng</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Thiết bị nhà bếp</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Máy giặt</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Điều hòa-Máy
+                                    lạnh</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Tủ lạnh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Bếp điện tử,bếp ga</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Electrolux</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">LG</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">LG</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Bình đun siêu tốc</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Sharp</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Daikin</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Samsung</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Bình thủy điện</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Samsung</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Casper</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AQUA</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Lò nướng</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">LG</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Panasonic</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Electrolux</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Lò vi sóng</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Panasonic</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Toshiba</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Casper</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy xanh thực phẩm</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Toshiba</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AQUA</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Panasonic</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy ép trái cây</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AQUA</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Gree</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Sharp</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy vắt cam</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Casper</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Samsung</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Toshiba</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy đánh trứng</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy giặt cửa trước</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Sharp</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Tủ lạnh Inverter</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy làm bánh mì</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy giặt cửa trên</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy lạnh Inverter</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Tủ lạnh Side-by-Side</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu PC-Máy tính bộ -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_pc.PNG" alt="điện" height="25" width="25">
+                            <a href="#">PC-Máy tính bộ</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">PC theo thương
+                                    hiệu</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">PC theo cấu hình
+                                    chip</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">PC theo nhu cầu</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">PC theo giá tiền</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Phong Vũ</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Pentium/Celeron</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">PC văn phòng</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dưới 10 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Acer</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Core i3</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">PC Gaming</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">10 - 15 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Apple</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Core i5</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">PC đồ họa</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">15 - 20 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Core i7</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">PC All-In-One</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Trên 20 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dell</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Xeon</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">PC Mini</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">HP</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ryzen</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Lenovo</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">MSI</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Intel</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu PC-Màn hình máy tính -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_monitor.PNG" alt="điện" height="25"
+                                width="25">
+                            <a href="#">PC-Màn hình máy tính</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Theo thương hiệu</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Theo giá</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Theo kích cỡ </a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Tần số quét</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">AOC</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dưới 3 triệu</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dưới 19"</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">60 Hz</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Acer</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">3 đến 5 triệu</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">19.5" đến 21.5"</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">75 Hz</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">5 đến 10 triệu</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">22" đến 25"</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">144 Hz</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dell</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">10 đến 15 triệu</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">27" đến 29"</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">165 Hz</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">HP</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">15 đến 20 triệu</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">31.5"</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">240 Hz</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Lenovo</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Trên 20 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">LG</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">MSI</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Philips</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Viewsonic</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Samsung</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu PC-Link kiện máy tính -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_linkKien.PNG" alt="điện" height="25"
+                                width="25">
+                            <a href="#">PC-Linh kiện máy tính</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">CPU - Bộ vi xử
+                                    lý</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Ổ cứng</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Case - Thùng máy
+                                    tính</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">VGA - Card màn
+                                    hình</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Pentium</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">WD</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">SAMA</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Core i3</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Seagate</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">XIGMATEK</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Colorful</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Core i5</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Kingston</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Golden Field</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">GALAX</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Core i7</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Samsung</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Deepcool</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Gigabyte</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Core i9</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Kingmax</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Phong Vũ</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">MSI</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Xeon</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Crucial</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Cooler Master</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">NVIDIA</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Athlon</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Transcend</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Aerocool</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AMD</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ryzen 3</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Sandisk</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ryzen 5</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Adata</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">MSI</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ryzen 7</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ổ cứng HDD</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">CORSAIR</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ryzen 9</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ổ cứng SSD</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Threadripper</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ổ cứng di động</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu PC-phụ kiện -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_phuKien.PNG" alt="điện" height="25"
+                                width="25">
+                            <a href="#">PC-Phụ kiện</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Chuột máy tính</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Bàn phím văn
+                                    phòng</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Ghế gaming</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Lót chuột</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Logitech</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Logitech</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Logitech</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Rapoo</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">CORSAIR</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">CORSAIR</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">CORSAIR</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Microsoft</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Drift Gaming</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Razer</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Razer</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">E-Dra</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">SteelSeries</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">SteelSeries</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Razer</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">MSI</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">HyperX</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">CORSAIR</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Warrior</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AKKO</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">AKKO</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">HyperX</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AKRacing</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">MSI</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Fuhlen</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Newmen</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Cougar</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Newmen</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">MSI</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">DareU</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Razer</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">HyperX</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dell</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AKKO</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">MSI</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Khác</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Newmen</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Fuhlen</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">SIHOO</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">DareU</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dell</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Khác</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Microsoft</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">SteelSeries</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">E-dra</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">E-dra</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu game -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_game.PNG" alt="điện" height="25"
+                                width="25">
+                            <a href="#">Game & Stream</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Màn hình Gaming</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Chuột Gaming</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Tay cầm & máy chơi
+                                    game</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Bàn phím gaming</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy chơi game</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Acer</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Logitech</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">PlayStation</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Logitech</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">BenQ</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">CORSAIR</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Xbox</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">CORSAIR</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dell</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Razer</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Logitech</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Razer</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">HP</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">SteelSeries</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Razer</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">SteelSeries</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">LG</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Zowie</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Rapoo</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AKKO</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">MSI</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">HyperX</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">MSI</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">HyperX</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Viewsonic</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AKKO</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">E-dra</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Samsung</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Khác</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Khác</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu Điện thoại -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_phone.PNG" alt="điện" height="25"
+                                width="25">
+                            <a href="#">Điện thoại & Phụ kiện</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Điện thoại</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Máy tính bảng</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Đồng hồ thông
+                                    minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">iPhone</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Apple</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Apple</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Samsung</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Samsung</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Samsung</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Xiaomi</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Garmin</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Xiaomi</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Lenovo</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Fitbit</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Nubia</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Masstel</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Xiaomi</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">ZTE</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dưới 5 triệu</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Khác</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dưới 5 triệu</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">5 - 10 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">5 - 10 triệu</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Trên 10 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">10 - 15 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">15 - 20 triệu</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Trên 20 triệu</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu Phụ kiện -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_phuKienDienThoai.PNG" alt="điện"
+                                height="25" width="25">
+                            <a href="#">Phụ kiện</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Phụ kiện laptop</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Linh kiện laptop</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Phụ kiện di động</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Hub-Bộ chia,chuyển
+                                    đổi</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Giá đỡ</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Bàn phím laptop</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Bao da - Ốp lưng</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Unitek</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Đế tản nhiệt</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Sạc laptop</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Pin dự phòng</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ugreen</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Balo-túi chống sốc</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Pin laptop</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Cáp sạc</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Mazer</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ốp lưng</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">RAM laptop</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Cục sạc</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">HyperDrive</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Dán màn hình</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Bộ cấp nguồn</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Giá đỡ</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Belkin</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Miếng lót bàn hình</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">LCD laptop</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Thẻ cào</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Khác</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Khác</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu Thiết bị âm thanh -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_amThanh.PNG" alt="tai nghe" height="25"
+                                width="25">
+                            <a href="#">Thiết bị âm thanh</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Tai nghe</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Loa nghe nhạc</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Các loại loa</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">MicroPhone</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Apple</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Bose</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Loa vi tính</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">SARAMONIC</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Sony</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Harman Kardon</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Loa Soundbar</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">SALAR</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Logitech</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">JBL</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Loa mini</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">AKG</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Logitech</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Loa Bluetooth</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">HyperX</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Razer</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Microlab</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Loa kéo</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">SENIC</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">HyperX</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Sony</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Loa 2.0</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Razer</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Zidli</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">SoundMax</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Loa 2.1</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">BOYA</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">DareU</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">ReMax</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Loa 4.1</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">SteelSeries</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">LG</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Loa 5.1</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">SoundMax</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Soundpeats</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">E-dra</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu thiết bị thông minh -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_thongMinh.PNG" alt="điện" height="25"
+                                width="25">
+                            <a href="#">Thiết bị thông minh</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Thiết bị thông
+                                    minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Bộ điều khiển trung tâm</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Bộ cảm biến</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Công tắt thông minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Xe điện</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Khóa cửa thông minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ổ cắm thông minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Thiết bị điều khiển</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Chuông báo động</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Đèn thông minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Camera thông minh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Sản phẩm khác</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu thiết bị văn phòng -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_TBVP.PNG" alt="điện" height="25"
+                                width="25">
+                            <a href="#">Thiết bị văn phòng</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Thiết bị mạng</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Thiết bị an ninh</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Máy in văn phòng</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Mực in - Giấy in</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">ASUS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">KBVISION</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Brother</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Mực in Laser</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">TP-Link</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">HIKVISION</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Canon</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Mực in phun</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">TOTOLINK</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">QUESTEK</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Espon</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Mực in máy Fax</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">D-Link</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">EZVIS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">HP</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Drum</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Tenda</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Xiaomi</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy in Laser</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ruy băng</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Linksys</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Camera an ninh</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy in kim</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Giấy in</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">DrayTek</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Camera Wifi</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy in phun</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Cisco</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Đầu ghi hình</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy in đa năng</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Router Wifi 6</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Router Wifi</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Wifi Mesh</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Hub-Switch</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">USB Wifi</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">USB 3G/4G</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Menu Giải pháp doanh nghiệp -->
+                    <li>
+                        <div class="dropdown-item d-flex align-items-center">
+                            <img class="img-responsive" src="assets/img/icon_GPDN.PNG" alt="điện" height="25"
+                                width="25">
+                            <a href="#">Giải pháp doanh nghiệp</a>
+                        </div>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li class="row">
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Thiết bị doanh
+                                    nghiệp</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Thiết bị hội
+                                    nghị</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Màn hình quảng
+                                    cáo</a>
+                                <a class="dropdown-item col-3 color_blue font-weight-bold" href="categoryPage.html">Thiết bị mạng</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Laptop</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Hội nghị truyền hình</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Màn hình khách sạn</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Switch</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy tính để bàn</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Camera hội nghị</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Màn hình quảng cáo</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy chủ-Server</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Micro hội nghị</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Màn hình tương tác</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Ổ cứng mạng-NAS</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Loa hội nghị</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Phần mềm</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Phần mềm hội nghị</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy chiếu</a>
+                                <a class="dropdown-item col-3" href="categoryPage.html">Phụ kiện hội nghị</a>
+                            </li>
+                            <li class="row">
+                                <a class="dropdown-item col-3" href="categoryPage.html">Máy Photocopy</a>
+                            </li>
+                            <li>
+                                <a style="color: white;" id="hide" class="dropdown-item"
+                                    href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Khúc này cần coi lại col-12 để responsive điện thoại -->
+            <div class="col-xl-6 col-md-4 col-12">
+                <form class="form-inline" action="/action_page.php">
+                    <input class="form-control mr-sm-2 col-sm-12 search" type="text" placeholder="Nhập từ khóa cần tìm">
+                </form>
+            </div>
+            <!-- Links -->
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/user_icon.PNG" alt="khuyến mãi" height="40"
+                            width="40">
+                        <div>
+                            <a href="#" class="color_gray fw-500 fontsize_13px">Đăng nhập</a>
+                            <br>
+                            <a href="#" class="color_gray fw-500 fontsize_13px">Đăng kí</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item d-flex align-items-center">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/notice_icon.PNG" alt="khuyến mãi" height="40"
+                            width="40">
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link d-flex align-items-center">
+                        <img class="img-responsive" src="assets/img/cart_icon.PNG" alt="khuyến mãi" height="40"
+                            width="40">
+                        <div>
+                            <a href="#" class="color_gray fw-500 fontsize_13px">Giỏ hàng của bạn</a>
+                            <br>
+                            <a href="#" class="color_gray fw-500 fontsize_13px">(0) sản phẩm</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        var logo = document.getElementById("logo");
+        var menu = document.getElementById("menu");
+        window.addEventListener('scroll', function () {
+            var scrollTop = document.documentElement.scrollTop;
+            // nếu kéo lên hết thì đổi logo và thêm menu
+            if (scrollTop >= 103.5) {
+                logo.src = "https://shopfront-cdn.tekoapis.com/static/phongvu/logo.svg"
+                menu.style.display = "block"
+            } else {
+                logo.src = "https://shopfront-cdn.tekoapis.com/static/phongvu/logo-full.svg"
+                menu.style.display = "none"
+            }
+        });
+    </script>
 </body>
 </html>
