@@ -124,10 +124,10 @@ $(document).ready(function(){
   });
   
 // Phần để ẩn/hiện các check box khi nhấn nút xem thêm
-var checkboxes = document.querySelectorAll("div[id=disappear]");
-var xemthem = document.getElementById('xemThem');
+function xemThem(idDivDisappear,idXemThem){
+  var checkboxes = document.querySelectorAll(idDivDisappear);
+  var xemthem = document.getElementById(idXemThem);
 
-xemthem.addEventListener("click",function(){
   if(xemthem.innerText == "Xem thêm"){
     xemthem.innerText = "Rút gọn"
     for(var i =0; i<checkboxes.length;i++){
@@ -140,7 +140,7 @@ xemthem.addEventListener("click",function(){
       checkboxes[i].style.display = "none"
     }
   }
-});
+};
 
 // ẩn luôn div lớn khi bấm vào mũi tên dropdown
 function toggle(idArrow,idForm){
@@ -150,11 +150,11 @@ function toggle(idArrow,idForm){
   var transformValue = arrow.style.transform;
 
   if(transformValue.includes("rotate(180deg)")){
-    form.style.display = "block"
+    form.style.display = "none"
     arrow.style.transform = "rotate(0deg)"
   }
   else{
-    form.style.display = "none"
+    form.style.display = "block"
     arrow.style.transform = "rotate(180deg)"
   }
 }

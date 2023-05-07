@@ -1178,7 +1178,7 @@
                         <div class="container pt-3">
                             <div id="dropdown-box" class="d-flex justify-content-between align-items-center mb-3" style="cursor: pointer;" onclick="toggle('dropdown-arrow-1','form-1')">
                                 <p class="text-sm fw-500">Series laptop</p>
-                                <i id="dropdown-arrow-1" class="fa-solid fa-caret-down"></i>
+                                <i id="dropdown-arrow-1" class="fa-solid fa-caret-down" style="transform: rotate(180deg);"></i>
                             </div>   
                             <form id="form-1">
                                 <div class="d-flex align-items-center mb-1" style="gap: 5px;">
@@ -1253,7 +1253,332 @@
                                     <input type="checkbox" name="check1" id="check1">
                                     <label class="text-xs" for="check1" style="margin-bottom: 0;">ZBOOK</label>
                                 </div>
-                                <p id="xemThem" class="text-center text-xs mt-3" style="color: #1990FF; cursor: pointer;">Xem thêm</p>
+                                <p onclick="xemThem('div[id=disappear]','xemThem')" id="xemThem" class="text-center text-xs mt-3" style="color: #1990FF; cursor: pointer;">Xem thêm</p>
+                            </form>
+                            <div class="py-2" style="border-bottom: 1px solid #e4e5f0;"></div>
+                        </div>
+
+                        <!--Màu sắc -->
+                        <div class="container pt-3">
+                            <div id="dropdown-box" class="d-flex justify-content-between align-items-center mb-3" style="cursor: pointer;" onclick="toggle('dropdown-arrow-2','form-2')">
+                                <p class="text-sm fw-500">Màu sắc</p>
+                                <i id="dropdown-arrow-2" class="fa-solid fa-caret-down" style="transform: rotate(180deg);"></i>
+                            </div>   
+                            <form id="form-2">
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">Bạc</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">Gold</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">Vàng</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">Vàng đồng</label>
+                                </div>
+                                <div id="disappear1" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Xanh</label>
+                                </div>
+                                <div id="disappear1" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Đen</label>
+                                </div>
+                                <p onclick="xemThem('div[id=disappear1]','xemThem1')" id="xemThem1" class="text-center text-xs mt-3" style="color: #1990FF; cursor: pointer;">Xem thêm</p>
+                            </form>
+                            <div class="py-2" style="border-bottom: 1px solid #e4e5f0;"></div>
+                        </div>
+
+                        <!-- Nhu cầu -->
+                        <div class="container pt-3">
+                            <div id="dropdown-box" class="d-flex justify-content-between align-items-center mb-3" style="cursor: pointer;" onclick="toggle('dropdown-arrow-3','form-3')">
+                                <p class="text-sm fw-500">Nhu cầu</p>
+                                <i id="dropdown-arrow-3" class="fa-solid fa-caret-down" style="transform: rotate(180deg);"></i>
+                            </div>   
+                            <form id="form-3">
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">Doanh nghiệp</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">Doanh nhân</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">Gaming</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">Học sinh - Sinh viên</label>
+                                </div>
+                                <div id="disappear2" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Văn phòng</label>
+                                </div>
+                                <div id="disappear2" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Đồ họa - Kĩ thuật</label>
+                                </div>
+                                <p onclick="xemThem('div[id=disappear2]','xemThem2')" id="xemThem2" class="text-center text-xs mt-3" style="color: #1990FF; cursor: pointer;">Xem thêm</p>
+                            </form>
+                            <div class="py-2" style="border-bottom: 1px solid #e4e5f0;"></div>
+                        </div>
+
+                        <!-- Series CPU -->
+                        <div class="container pt-3">
+                            <div id="dropdown-box" class="d-flex justify-content-between align-items-center mb-3" style="cursor: pointer;" onclick="toggle('dropdown-arrow-4','form-4')">
+                                <p class="text-sm fw-500">Series CPU</p>
+                                <i id="dropdown-arrow-4" class="fa-solid fa-caret-down" style="transform: rotate(180deg);"></i>
+                            </div>   
+                            <form id="form-4">
+                                <div class="d-flex align-items-center mb-1 justify-content-between">
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">Core i3</label>
+                                    </div>
+
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">Core i5</label>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-1 justify-content-between">
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">Core i7</label>
+                                    </div>
+
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">Core i9</label>
+                                    </div>
+                                </div>
+                                <div id="disappear3" class="flex align-items-center mb-1 justify-content-between" style="display: none;">
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">Ryzen 3</label>
+                                    </div>
+
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">Ryzen 5</label>
+                                    </div>
+                                </div>
+                                <div id="disappear3" class="flex align-items-center mb-1 justify-content-between" style="display: none;">
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">Ryzen 7</label>
+                                    </div>
+
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">Ryzen 9</label>
+                                    </div>
+                                </div>
+                                <p onclick="xemThem('div[id=disappear3]','xemThem3')" id="xemThem3" class="text-center text-xs mt-3" style="color: #1990FF; cursor: pointer;">Xem thêm</p>
+                            </form>
+                            <div class="py-2" style="border-bottom: 1px solid #e4e5f0;"></div>
+                        </div>
+
+                        <!-- Chip đồ họa rời -->
+                        <div class="container pt-3">
+                            <div id="dropdown-box" class="d-flex justify-content-between align-items-center mb-3" style="cursor: pointer;" onclick="toggle('dropdown-arrow-5','form-5')">
+                                <p class="text-sm fw-500">Chip đồ họa rời</p>
+                                <i id="dropdown-arrow-5" class="fa-solid fa-caret-down" style="transform: rotate(180deg);"></i>
+                            </div>   
+                            <form id="form-5">
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">GTX 1650</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">GeForce MX250</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">GeForce MX450</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">GeForce MX550</label>
+                                </div>
+                                <div id="disappear4" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Onboard</label>
+                                </div>
+                                <div id="disappear4" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Quadro T500</label>
+                                </div>
+                                <div id="disappear4" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">RTX 3050</label>
+                                </div>
+                                <div id="disappear4" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">RTX 3050Ti</label>
+                                </div>
+                                <div id="disappear4" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">RTX 3060</label>
+                                </div>
+                                <div id="disappear4" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">RTX 3070</label>
+                                </div>
+                                <div id="disappear4" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">RTX 3070Ti</label>
+                                </div>
+                                <p onclick="xemThem('div[id=disappear4]','xemThem4')" id="xemThem4" class="text-center text-xs mt-3" style="color: #1990FF; cursor: pointer;">Xem thêm</p>
+                            </form>
+                            <div class="py-2" style="border-bottom: 1px solid #e4e5f0;"></div>
+                        </div>
+
+                        <!-- Dung lượng ram -->
+                        <div class="container pt-3">
+                            <div id="dropdown-box" class="d-flex justify-content-between align-items-center mb-3" style="cursor: pointer;" onclick="toggle('dropdown-arrow-6','form-6')">
+                                <p class="text-sm fw-500">Dung lượng RAM</p>
+                                <i id="dropdown-arrow-6" class="fa-solid fa-caret-down" style="transform: rotate(180deg);"></i>
+                            </div>   
+                            <form id="form-6">
+                                <div class="d-flex align-items-center mb-1 justify-content-between">
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">4GB</label>
+                                    </div>
+
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">16GB</label>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-1 justify-content-between">
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">8GB</label>
+                                    </div>
+
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">32GB</label>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="py-2" style="border-bottom: 1px solid #e4e5f0;"></div>
+                        </div>
+
+                        <!-- Kích thước màn hình -->
+                        <div class="container pt-3">
+                            <div id="dropdown-box" class="d-flex justify-content-between align-items-center mb-3" style="cursor: pointer;" onclick="toggle('dropdown-arrow-7','form-7')">
+                                <p class="text-sm fw-500">Kích thước màn hình</p>
+                                <i id="dropdown-arrow-7" class="fa-solid fa-caret-down"></i>
+                            </div>   
+                            <form id="form-7" style="display: none;">
+                                <div class="d-flex align-items-center mb-1 justify-content-between">
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">13.3"</label>
+                                    </div>
+
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">13.5"</label>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-1 justify-content-between">
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">14"</label>
+                                    </div>
+
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">15.6"</label>
+                                    </div>
+                                </div>
+                                <div id="disappear5" class="flex align-items-center mb-1 justify-content-between" style="display: none;">
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">16"</label>
+                                    </div>
+
+                                    <div class="d-flex" style="gap: 5px;">
+                                        <input type="checkbox" name="check1" id="appear">
+                                        <label class="text-xs" for="appear" style="margin-bottom: 0;">16.1"</label>
+                                    </div>
+                                </div>
+                                <p onclick="xemThem('div[id=disappear5]','xemThem5')" id="xemThem5" class="text-center text-xs mt-3" style="color: #1990FF; cursor: pointer;">Xem thêm</p>
+                            </form>
+                            <div class="py-2" style="border-bottom: 1px solid #e4e5f0;"></div>
+                        </div>
+
+                        <!-- Chuẩn phân giải -->
+                        <div class="container pt-3">
+                            <div id="dropdown-box" class="d-flex justify-content-between align-items-center mb-3" style="cursor: pointer;" onclick="toggle('dropdown-arrow-8','form-8')">
+                                <p class="text-sm fw-500">Chuẩn phân giải</p>
+                                <i id="dropdown-arrow-8" class="fa-solid fa-caret-down"></i>
+                            </div>   
+                            <form id="form-8" style="display: none;">
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">Full HD</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">HD</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">Quad HD (2K)</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">Quad HD+ (2K)</label>
+                                </div>
+                                <div id="disappear6" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">UHD+</label>
+                                </div>
+                                <div id="disappear6" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">WQXGA</label>
+                                </div>
+                                <div id="disappear6" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">WUXGA</label>
+                                </div>
+                                <div id="disappear6" class="flex align-items-center mb-1" style="gap: 5px; display: none;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">WUXGA+</label>
+                                </div>
+                                <p onclick="xemThem('div[id=disappear6]','xemThem6')" id="xemThem6" class="text-center text-xs mt-3" style="color: #1990FF; cursor: pointer;">Xem thêm</p>
+                            </form>
+                            <div class="py-2" style="border-bottom: 1px solid #e4e5f0;"></div>
+                        </div>
+
+                        <!-- Màn hình cảm ứng -->
+                        <div class="container pt-3">
+                            <div id="dropdown-box" class="d-flex justify-content-between align-items-center mb-3" style="cursor: pointer;" onclick="toggle('dropdown-arrow-9','form-9')">
+                                <p class="text-sm fw-500">Màn hình cảm ứng</p>
+                                <i id="dropdown-arrow-9" class="fa-solid fa-caret-down"></i>
+                            </div>   
+                            <form id="form-9" style="display: none;">
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">cảm ứng</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">không cảm ứng</label>
+                                </div>
                             </form>
                             <div class="py-2" style="border-bottom: 1px solid #e4e5f0;"></div>
                         </div>
