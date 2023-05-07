@@ -1157,7 +1157,7 @@
                 <div class="row">
                     <!-- Lọc tìm kiếm -->
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 bg-white pl-0" style="background-clip: content-box;">
-                        <div class="container py-3">
+                        <div class="container pt-3">
                             <p class="text-sm fw-500 mb-2">Khoảng giá</p>
                             <div id="valueCost" class="d-flex justify-content-between align-items-center mb-1" style="position: relative;z-index: 0;">
                                 <span id="range1" class="col-xl-5 col-lg-5 col-md-5 text-center py-2 text-xs rounded bg-white" style="border: 1px solid rgb(228, 229, 240);">0đ</span>
@@ -1171,8 +1171,92 @@
                                 <span class="text-xs" id="slider-tooltip"></span>
                                 <input type="range" min="0" max="70000000" step="500000" value="70000000" name="range2" id="slider-2" oninput="slideTwo()">
                             </div>
+
+                            <div class="py-3" style="border-bottom: 1px solid #e4e5f0;"></div>
                         </div>
-                        <div class="container py-3">a</div>
+                        <!-- Serie laptop -->
+                        <div class="container pt-3">
+                            <div id="dropdown-box" class="d-flex justify-content-between align-items-center mb-3" style="cursor: pointer;" onclick="toggle('dropdown-arrow-1','form-1')">
+                                <p class="text-sm fw-500">Series laptop</p>
+                                <i id="dropdown-arrow-1" class="fa-solid fa-caret-down"></i>
+                            </div>   
+                            <form id="form-1">
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">14/15 Series</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">Elite</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">EliteBook X360</label>
+                                </div>
+                                <div class="d-flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="appear">
+                                    <label class="text-xs" for="appear" style="margin-bottom: 0;">EliteBook x361</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Elitebook</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Envy</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Envy X360</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">HP 14s</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">HP 15s</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">HP 240</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Notebook</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">OMEN</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Pavilion</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Pavilion X360</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">ProBook</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">Spectre</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">VICTUS</label>
+                                </div>
+                                <div id="disappear" class="flex align-items-center mb-1" style="gap: 5px;">
+                                    <input type="checkbox" name="check1" id="check1">
+                                    <label class="text-xs" for="check1" style="margin-bottom: 0;">ZBOOK</label>
+                                </div>
+                                <p id="xemThem" class="text-center text-xs mt-3" style="color: #1990FF; cursor: pointer;">Xem thêm</p>
+                            </form>
+                            <div class="py-2" style="border-bottom: 1px solid #e4e5f0;"></div>
+                        </div>
                     </div>
                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 bg-white">b</div>
                 </div>

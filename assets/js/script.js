@@ -38,7 +38,7 @@ function slideTwo(){
 function fillColor(){
     percent1 = (sliderOne.value / sliderMaxValue) * 100;
     percent2 = (sliderTwo.value / sliderMaxValue) * 100;
-    sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
+    sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , rgb(20, 53, 195) ${percent1}% , rgb(20, 53, 195) ${percent2}%, #dadae5 ${percent2}%)`;
 }
 
 $(document).ready(function(){
@@ -123,3 +123,38 @@ $(document).ready(function(){
     })
   });
   
+// Phần để ẩn/hiện các check box khi nhấn nút xem thêm
+var checkboxes = document.querySelectorAll("div[id=disappear]");
+var xemthem = document.getElementById('xemThem');
+
+xemthem.addEventListener("click",function(){
+  if(xemthem.innerText == "Xem thêm"){
+    xemthem.innerText = "Rút gọn"
+    for(var i =0; i<checkboxes.length;i++){
+      checkboxes[i].style.display = "flex"
+    }
+  }
+  else{
+    xemthem.innerText = "Xem thêm"
+    for(var i =0; i<checkboxes.length;i++){
+      checkboxes[i].style.display = "none"
+    }
+  }
+});
+
+// ẩn luôn div lớn khi bấm vào mũi tên dropdown
+function toggle(idArrow,idForm){
+  var arrow = document.getElementById(idArrow);
+  var form = document.getElementById(idForm);
+  // Kích thước xem mũi tên có bị đảo ngược 180 độ
+  var transformValue = arrow.style.transform;
+
+  if(transformValue.includes("rotate(180deg)")){
+    form.style.display = "block"
+    arrow.style.transform = "rotate(0deg)"
+  }
+  else{
+    form.style.display = "none"
+    arrow.style.transform = "rotate(180deg)"
+  }
+}
