@@ -1152,9 +1152,36 @@
                     <p class="text-sm color_gray"><a id="linkTT" href="index.html">Trang chủ</a> > Laptop HP Envy x360 13-bf0096TU (i5-1230U/RAM 8GB/512GB SSD/ Windows 11)</p>
                 </div>
             </div>
+
+            <div class="container">
+                <div class="row">
+                    <!-- Lọc tìm kiếm -->
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 bg-white pl-0" style="background-clip: content-box;">
+                        <div class="container py-3">
+                            <p class="text-sm fw-500 mb-2">Khoảng giá</p>
+                            <div id="valueCost" class="d-flex justify-content-between align-items-center mb-1" style="position: relative;z-index: 0;">
+                                <span id="range1" class="col-xl-5 col-lg-5 col-md-5 text-center py-2 text-xs rounded bg-white" style="border: 1px solid rgb(228, 229, 240);">0đ</span>
+                                <span id="range2" class="col-xl-5 col-lg-5 col-md-5 text-center py-2 text-xs rounded bg-white" style="border: 1px solid rgb(228, 229, 240);">70.000.000đ</span>
+                            </div>
+
+                            <!-- slider track with two slider thumb -->
+                            <div class="my-3" style="position: relative; background-color: #f8f8f8;">
+                                <div class="slider-track"></div>
+                                <input type="range" min="0" max="70000000" step="500000" value="0" name="range1" id="slider-1" oninput="slideOne()">
+                                <span class="text-xs" id="slider-tooltip"></span>
+                                <input type="range" min="0" max="70000000" step="500000" value="70000000" name="range2" id="slider-2" oninput="slideTwo()">
+                            </div>
+                        </div>
+                        <div class="container py-3">a</div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 bg-white">b</div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- link js -->
+    <script src="assets/js/script.js"></script>
     <script>
         var logo = document.getElementById("logo");
         var menu = document.getElementById("menu");
