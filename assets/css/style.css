@@ -260,5 +260,14 @@ input[type="range"]:active::-webkit-slider-thumb{
     background-color: white;
     opacity: 0.8;
 }
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.imgBanner:hover{
+    transform: scale(1.05);
+    object-fit: cover;
+}
   
 
