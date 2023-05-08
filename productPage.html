@@ -1125,10 +1125,13 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item d-flex align-items-center">
-                    <div class="nav-link d-flex align-items-center">
-                        <img class="img-responsive" src="assets/img/notice_icon.PNG" alt="khuyến mãi" height="40"
+                <li id="notification" class="nav-item d-flex align-items-center" style="position: relative;">
+                    <div class="nav-link d-flex align-items-center cursor-pointer">
+                        <img id="img-notification" class="img-responsive" src="assets/img/notice_icon.PNG" alt="khuyến mãi" height="40"
                             width="40">
+                    </div>
+                    <div id="notification1" class="bg-white shadow-lg container rounded py-2" style="position: absolute; top: 90%; right: 50%; width: 200px; display: none;">
+                        <a href="notificationPage.html" class="text-center text-sm hover-gray-color-text" style="width: 100%; color: rgb(167, 171, 195);">Xem tất cả thông báo</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -1879,6 +1882,24 @@
         var img_logo = document.getElementById("img_logo");
         var height = img_logo.offsetHeight
         img_logo.style.width = height + "px"
+
+        //phần code dành cho hiện thông báo
+        $(document).ready(function(){
+            let notification = document.getElementById("notification")
+            let notification1 = document.getElementById("notification1") 
+          
+            notification.addEventListener("mouseover", function(){
+              notification1.style.display = "block";
+            });
+
+            notification.addEventListener("mouseover", function(){
+                notification1.style.display = "block";
+            });
+          
+            notification.addEventListener("mouseout", function(){
+              notification1.style.display = "none";
+            });
+          });
     </script>
 </body>
 </html>
