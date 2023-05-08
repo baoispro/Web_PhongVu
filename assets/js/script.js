@@ -1,3 +1,4 @@
+/* Phần js dành cho category page */
 window.onload = function(){
     slideOne();
     slideTwo();
