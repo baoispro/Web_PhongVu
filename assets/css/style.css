@@ -240,6 +240,10 @@ input[type="range"]:active::-webkit-slider-thumb{
     cursor: pointer;
   }
 
+  .hover-gray-color-text:hover{
+    color: rgb(130, 134, 158) !important;
+  }
+
   @media screen and (min-width: 768px) and (max-width: 992px){
     .responsive-ipad-text{
         font-size: .5rem !important;
