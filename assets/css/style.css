@@ -245,5 +245,20 @@ input[type="range"]:active::-webkit-slider-thumb{
         font-size: .5rem !important;
     }
   }
+
+#hover-fb:hover{
+    background-color: rgb(45, 136, 255);
+    opacity: 0.8;
+}
+
+#hover-gg:hover{
+    background-color: rgb(220, 78, 66);
+    opacity: 0.8;
+}
+
+#hover-phone:hover{
+    background-color: white;
+    opacity: 0.8;
+}
   
 
