@@ -1134,15 +1134,20 @@
                         <a href="notificationPage.html" class="text-center text-sm hover-gray-color-text" style="width: 100%; color: rgb(167, 171, 195);">Xem tất cả thông báo</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <div class="nav-link d-flex align-items-center">
+                <li id="cart" class="nav-item cursor-pointer" style="position: relative;">
+                    <div class="nav-link d-flex align-items-center"  onclick="window.location='cartPage.html';">
                         <img class="img-responsive" src="assets/img/cart_icon.PNG" alt="khuyến mãi" height="40"
-                            width="40">
+                            width="40" onclick="window.location='cartPage.html';">
                         <div>
-                            <a href="#" class="color_gray fw-500 fontsize_13px">Giỏ hàng của bạn</a>
+                            <a href="cartPage.html" class="color_gray fw-500 fontsize_13px">Giỏ hàng của bạn</a>
                             <br>
-                            <a href="#" class="color_gray fw-500 fontsize_13px">(0) sản phẩm</a>
+                            <a href="cartPage.html" class="color_gray fw-500 fontsize_13px">(0) sản phẩm</a>
                         </div>
+                    </div>
+                    <div id="cart-item" class="bg-white shadow-lg rounded container flex flex-column py-5 justify-content-center align-items-center" style="position: absolute; top: 100%; right: 0; width: 400px; height: 400px; gap: 10px; display: none;">
+                        <img src="assets/img/empty_cart.png" alt="emty-cart" style="object-fit: contain; width: 50%;">
+                        <p class="text-sm color_gray1">Giỏ hàng chưa có sản phẩm nào</p>
+                        <button class="bg-blue2 color_white p-2 rounded text-sm hover-blue" onclick="window.location='index.html';">Mua sắm ngay</button>
                     </div>
                 </li>
             </ul>
@@ -2812,7 +2817,25 @@
             notification.addEventListener("mouseout", function(){
               notification1.style.display = "none";
             });
-          });
+        });
+
+        //Phần code hiện giỏ hàng
+        $(document).ready(function(){
+            let cart = document.getElementById("cart")
+            let cart_item = document.getElementById("cart-item") 
+          
+            cart.addEventListener("mouseover", function(){
+                cart_item.style.display = "flex";
+            });
+
+            cart.addEventListener("mouseover", function(){
+                cart_item.style.display = "flex";
+            });
+          
+            cart.addEventListener("mouseout", function(){
+                cart_item.style.display = "none";
+            });
+        });
     </script>
 </body>
 </html>
